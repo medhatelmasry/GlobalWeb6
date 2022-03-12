@@ -1,0 +1,15 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<SharedResource> _sharedLocalizer
+
+@{
+    ViewData["Title"] = _localizer["Privacy Policy"];
+}
+<h1>@ViewData["Title"]</h1>
+<h3 class="display-4">@ViewData["welcome"]</h3>
+<p>@ViewData["pressRelease"]</p>
+
+<p>@_sharedLocalizer["It's great to see you again."]</p>
+
